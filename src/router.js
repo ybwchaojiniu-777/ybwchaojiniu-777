@@ -1,25 +1,58 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Movie from './views/Movie.vue'
+import City from './views/City.vue'
+import Now from './views/NowPlaying.vue'
+import Soon from './views/ComingSoon.vue'
+import Search from './views/Search.vue'
+import CiList from './views/CiList.vue'
+import Yingyuan from './views/Yingyuan.vue'
+import Login from './views/login.vue'
+
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
-  ]
+
+    routes: [{
+            path: '/Movie',
+            name: Movie,
+            component: Movie
+        },
+        {
+            path: '/',
+            name: City,
+            component: City
+        },
+        {
+            path: '/Now',
+            name: Now,
+            component: Now
+        },
+        {
+            path: '/Soon',
+            name: Soon,
+            component: Soon
+        },
+        {
+            path: '/Search',
+            name: Search,
+            component: Search
+        },
+        {
+            path: '/CiList',
+            name: CiList,
+            component: CiList
+        },
+        {
+            path: '/Yingyuan',
+            name: Yingyuan,
+            component: Yingyuan
+        },
+        {
+            path: '/Login',
+            name: Login,
+            component: Login
+        }
+    ]
 })
